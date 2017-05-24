@@ -8,9 +8,13 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { EtiquetaPage } from '../pages/etiqueta/etiqueta';
-
+import { ContenidoPage } from '../pages/contenido/contenido';
+import { ComidaPage } from '../pages/comida/comida';
+import { CalimentoPage } from '../pages/calimento/calimento';
+import { EfectosPage } from '../pages/efectos/efectos';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Food } from '../providers/food/food';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    EtiquetaPage
+    EtiquetaPage,
+    ContenidoPage,
+    ComidaPage,
+    CalimentoPage,
+    EfectosPage
   ],
   imports: [
     BrowserModule,
@@ -32,12 +40,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    EtiquetaPage
+    EtiquetaPage,
+    ContenidoPage,
+    ComidaPage,
+    CalimentoPage,
+    EfectosPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Food
   ]
 })
 export class AppModule {}
