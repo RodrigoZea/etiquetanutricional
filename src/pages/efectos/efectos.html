@@ -4,6 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
 <ion-header>
 
   <ion-navbar>
@@ -15,4 +16,9 @@
 
 <ion-content padding>
 
+  <canvas baseChart [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions" [legend]="chartLegend"
+      [chartType]="chartType"></canvas>
+
+<h2>Calidad del producto:</h2>
+<p class="texto">{{ food.efectosd }}</p>
 </ion-content>

@@ -16,8 +16,9 @@ import { EfectosPage } from '../efectos/efectos';
   templateUrl: 'contenido.html',
 })
 export class ContenidoPage {
-
+  public foodId;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.foodId = navParams.get("food_id");
   }
 
   ionViewDidLoad() {
@@ -25,11 +26,11 @@ export class ContenidoPage {
   }
 
 verEfectos(){
-  this.navCtrl.push(EfectosPage);
+  this.navCtrl.push(EfectosPage, {"food_id": this.foodId});
 }
 
 verCalimento(){
-  this.navCtrl.push(CalimentoPage);
+  this.navCtrl.push(CalimentoPage, {"food_id": this.foodId});
 }
 
 }

@@ -15,6 +15,8 @@ import { EfectosPage } from '../pages/efectos/efectos';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Food } from '../providers/food/food';
+import {ChartsModule} from 'ng2-charts/charts/charts';
+import '../../node_modules/chart.js/dist/Chart.bundle.min.js';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { Food } from '../providers/food/food';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
