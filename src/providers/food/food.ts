@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class Food {
 
-  public alimentos: {id: number, nombre: string, desc:string, img: string, efectosd: string, cimg: string, etiqueta: string, fcolor: string, contenido: string, chart: any}[];
+  public alimentos: {id: number, nombre: string, desc:string, img: string, efectosd: string, cimg: string, etiqueta: string, fcolor: string, contenido: string, chart: any, chart2: any}[];
   constructor() {
     console.log("hello FoodProvider")
     this.alimentos = [
@@ -23,7 +23,7 @@ export class Food {
         cimg:"",
         etiqueta: "imas/e1.png",
         fcolor: "",
-        contenido: "Este alimento contiene una cantidad baja en grasas y colesterol, por lo que si sigue consumiendo este producto, no le causará ningún daño grave. Además fortalecerá su crecimiento.",
+        contenido: "Este alimento contiene una cantidad baja en grasas y colesterol, por lo que si sigue consumiendo este producto, no le causará ningún daño grave. Además fortalecerá su crecimiento y le proveerá energías.",
         chart: {
           label:  ['Efectos Negativos', 'Efectos Positivos'],
           type: "doughnut",
@@ -35,6 +35,18 @@ export class Food {
           data: [
             { data: [11, 89], label: 'Efectos Avena' }//,
             //{ data: [80, 55, 75, 95], label: 'Student B' }
+          ]
+        },
+        chart2: {
+          label:  ['Grasa total', 'Grasa saturada', 'Colesterol', 'Sodio', 'Proteína'],
+          type: "bar",
+          legend: true,
+          options: {
+              scaleShowVerticalLines: false,
+              responsive: true
+            },
+          data: [
+            { data: [2, 1.5, 0.010, 0.4, 16], label: 'Gramos de'}
           ]
         }
       },
@@ -59,6 +71,18 @@ export class Food {
           data: [
             { data: [50, 50], label: 'Efectos Coca-Cola' }
           ]
+        },
+        chart2: {
+          label:  ['Grasa total', 'Grasa saturada', 'Fibras', 'Azúcares', 'Proteína'],
+          type: "bar",
+          legend: true,
+          options: {
+              scaleShowVerticalLines: false,
+              responsive: true
+            },
+          data: [
+            { data: [0, 0, 27, 27, 0], label: 'Gramos de'}
+          ]
         }
       },
       {
@@ -81,6 +105,18 @@ export class Food {
             },
           data: [
             { data: [25, 75], label: 'Efectos Galletas' }
+          ]
+        },
+        chart2: {
+          label:  ['Grasa total', 'Grasa saturada', 'Colesterol', 'Proteína', 'Carbohidratos '],
+          type: "bar",
+          legend: true,
+          options: {
+              scaleShowVerticalLines: false,
+              responsive: true
+            },
+          data: [
+            { data: [12, 3, 0.3, 5, 31], label: 'Gramos de'}
           ]
         }
         }];

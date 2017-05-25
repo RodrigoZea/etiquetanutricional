@@ -16,4 +16,7 @@
 <ion-content padding>
 <h3>¿Qué estoy consumiendo?</h3>
 <p>{{ food.contenido }}</p>
+
+<canvas baseChart [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions" [legend]="chartLegend"
+    [chartType]="chartType"></canvas>
 </ion-content>

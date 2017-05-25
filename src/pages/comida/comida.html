@@ -16,7 +16,7 @@
 
 <ion-content padding>
 <ion-list>
-  <ion-card *ngFor="let alimento of alimentos">
+  <ion-card *ngFor="let alimento of alimentos" color="">
     <!--imagen va aquí-->
     <img [src] = "alimento.img" (click)="foodView(alimento.id)">
     <ion-card-content>

@@ -12,12 +12,30 @@ import { Food } from '../../providers/food/food';
 @Component({
   selector: 'page-calimento',
   templateUrl: 'calimento.html',
+  providers: [ Food ]
 })
 export class CalimentoPage {
-  public food;
+  /*public food;
   constructor(public navCtrl: NavController, public navParams: NavParams, public foodProvider: Food) {
     let foodId = navParams.get("food_id");
     this.food = foodProvider.getFoodFromId(foodId);
+  }*/
+
+  public food;
+  public chartOptions;
+  public chartLabels;
+  public chartType;
+  public chartLegend;
+  public chartData;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public foodProvider: Food) {
+    let foodId = navParams.get("food_id");
+    this.food = foodProvider.getFoodFromId(foodId);
+    this.chartOptions = this.food.chart2.options;
+    this.chartLabels = this.food.chart2.label;
+    console.log(this.food.chart2.data);
+    this.chartData = this.food.chart2.data;
+    this.chartType = this.food.chart2.type;
+    this.chartLegend = this.food.chart2.legend;
   }
 
   ionViewDidLoad() {
