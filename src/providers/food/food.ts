@@ -45,7 +45,7 @@ export class Food {
         img:"imas/coca.png",
         efectosd:"Regular. La bebida puede debilitar sus huesos y le puede causar diabetes, otros problemas de circulación si sigue consumiendo este producto. Sin embargo, lo mantiene activo a través de un día largo y cansado por un tiempo, debido a que el valor energético es bajo.",
         cimg:"",
-        etiqueta: "",
+        etiqueta: "imas/e2.jpg",
         fcolor: "#ffff00",
         contenido: "Contiene azúcares en exceso y cafeína, causante de las enfermedades descritas en los efectos como diabetes. ",
         chart: {
